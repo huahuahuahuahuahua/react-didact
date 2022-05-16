@@ -303,3 +303,19 @@ Didact.render(element, container);
 // text["nodeValue"] = element.props.children;
 
 // container.appendChild(node);
+
+// 调度入口
+function scheduleCallback(task, pririty) {
+  const taskItem = {
+    callback: task,
+    priority,
+  };
+}
+//
+function calculate() {
+  currentResult++;
+  if (currentResult < result) {
+    return calculate;
+  }
+  return null;
+}

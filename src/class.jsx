@@ -1,10 +1,3 @@
-// const element = {
-//   type: "h1",
-//   props: {
-//     title: "foo",
-//     children: "Hello",
-//   },
-// };
 const Didact = {
   createElement,
   render,
@@ -20,13 +13,6 @@ const Didact = {
 function App(props) {
   return <h1 onClick={() => console.log("1111")}>Hi {props.name}</h1>;
 }
-const element = <App name="foo" />;
-console.log(element);
-/** @jsx Didact.createElement */
-// function App(props) {
-//   return <h1>Hi {props.name}</h1>;
-// }
-// const element = <App name="foo" />;
 
 function createElement(type, props, ...children) {
   return {
@@ -48,7 +34,6 @@ function createTextElement(text) {
     },
   };
 }
-const container = document.getElementById("root");
 function createDom(fiber) {
   const dom =
     fiber.type == "TEXT_ELEMENT"
@@ -285,6 +270,7 @@ function reconcileChildren(wipFiber, elements) {
     index++;
   }
 }
+const container = document.getElementById("root");
 Didact.render(element, container);
 
 // const text = document.createTextNode("");

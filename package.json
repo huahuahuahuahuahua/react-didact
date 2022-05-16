@@ -1,7 +1,7 @@
 {
   "name": "react-didact",
   "version": "1.0.0",
-  "description": "",
+  "description": "build you own mini React",
   "main": "hooks.js",
   "scripts": {
     "start": "vite",
